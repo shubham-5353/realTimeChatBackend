@@ -16,10 +16,6 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER(16),
         allowNull: false,
       },
-      chatInitiateBy: {
-        type: DataTypes.BOOLEAN,
-        allowNull: false,
-      },
       isActive: {
         type: DataTypes.BOOLEAN,
         allowNull: false,

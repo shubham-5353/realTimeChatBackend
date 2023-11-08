@@ -76,7 +76,7 @@ const userLogin = async (req, res, next) => {
     }
     let jwtToken = await utils.getJWTToken(userInfo);
     return res.status(200).json({
-      success: false,
+      success: true,
       userInfo: {
         userId: userInfo.id,
         name: userInfo.name,

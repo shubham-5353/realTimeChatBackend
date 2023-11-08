@@ -12,6 +12,14 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER(16),
         allowNull: false,
       },
+      senderUserId: {
+        type: DataTypes.INTEGER(16),
+        allowNull: false,
+      },
+      receiverUserId: {
+        type: DataTypes.INTEGER(16),
+        allowNull: false,
+      },
       message: {
         type: DataTypes.TEXT,
         allowNull: false,

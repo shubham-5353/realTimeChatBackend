@@ -16,12 +16,12 @@ const getUsersList = async (req, res, next) => {
       },
     };
 
-    if (req.query?.seach) {
+    if (req.query?.search) {
       condition = Object.assign(condition, {
         [Op.or]: {
-          name: { [Op.like]: `%${req.query.seach}%` },
-          email: { [Op.like]: `%${req.query.seach}%` },
-          mobileNumber: { [Op.like]: `%${req.query.seach}%` },
+          name: { [Op.like]: `%${req.query.search}%` },
+          email: { [Op.like]: `%${req.query.search}%` },
+          mobileNumber: { [Op.like]: `%${req.query.search}%` },
         },
       });
     }
@@ -29,7 +29,7 @@ const getUsersList = async (req, res, next) => {
       where: condition,
     });
     return res.status(200).json({
-      status: true,
+      success: true,
       data: usersList,
     });
   } catch (error) {
